@@ -37,6 +37,14 @@ nav a {
   height: 100vh;
   background: url("banner.jpg") no-repeat center/cover;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  height: 100vh;
+  background: url("banner.jpg") no-repeat center/cover;
+  position: relative;
 }
 
 /* Dark overlay */
