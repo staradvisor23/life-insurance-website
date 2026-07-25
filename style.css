@@ -234,3 +234,15 @@ footer {
   }
 
 }
+/* MOBILE BANNER FIX */
+@media (max-width: 768px) {
+
+  .hero {
+    height: 70vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+  }
+
+}
