@@ -244,5 +244,50 @@ footer {
     background-position: center;
     background-color: #000;
   }
+}
+/* INSURANCE PLANS */
+
+.plans {
+    padding:60px 8%;
+    text-align:center;
+}
+
+.plan-cards {
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.plan-card {
+    background:white;
+    padding:30px;
+    width:30%;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.plan-card:hover {
+    transform:translateY(-10px);
+}
+
+.plan-card h2 {
+    color:#0b2c63;
+}
+
+.plan-card h3 {
+    color:green;
+    margin:15px;
+}
+
+
+/* Mobile */
+@media(max-width:768px){
+
+.plan-card{
+    width:90%;
+    margin:auto;
+}
 
 }
