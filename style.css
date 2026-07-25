@@ -364,3 +364,18 @@ footer {
 }
 
 }
+/* REMOVE EXTRA GAP */
+
+.reviews {
+    padding: 30px 8%;
+    margin: 0;
+}
+
+.review-cards {
+    margin-top: 20px;
+}
+
+.faq {
+    padding: 40px 8%;
+    margin-top: 0;
+}
