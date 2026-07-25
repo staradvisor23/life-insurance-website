@@ -54,10 +54,7 @@ nav a {
     background-image: url("banner.jpg");
   }
 
-  66% {
-    background-image: url("banner2.jpg");
-  }
-
+ 
   100% {
     background-image: url("banner1.jpeg");
   }
