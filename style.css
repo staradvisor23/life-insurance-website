@@ -103,4 +103,67 @@ nav a {
   padding: 15px;
   border-radius: 50%;
   font-size: 20px;
+}/* SERVICES */
+.services {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.services h1 {
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 30%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card i {
+  font-size: 30px;
+  color: #0b2c63;
+  margin-bottom: 10px;
+}
+
+/* ABOUT */
+.about {
+  padding: 60px 8%;
+  background: #eef2f7;
+  text-align: center;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact {
+  padding: 60px 8%;
+  text-align: center;
+}
+
+.contact h1 {
+  margin-bottom: 20px;
+}
+
+/* FOOTER */
+footer {
+  background: #0b2c63;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
