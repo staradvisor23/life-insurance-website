@@ -124,7 +124,45 @@
     </div>
 
 </section>
-    <!-- ABOUT -->
+  <!-- Premium Calculator Section -->
+<section class="calculator">
+    ...
+</section>
+
+
+<!-- JavaScript -->
+<script>
+
+function calculatePremium(){
+
+let age = document.getElementById("age").value;
+let income = document.getElementById("income").value;
+let type = document.getElementById("type").value;
+
+let premium;
+
+if(type=="Life Insurance"){
+    premium = 500;
+}
+else if(type=="Health Insurance"){
+    premium = 700;
+}
+else{
+    premium = 1000;
+}
+
+if(age=="" || income==""){
+    document.getElementById("result").innerHTML="Please fill all details";
+}
+else{
+    document.getElementById("result").innerHTML=
+    "Estimated Premium: ₹"+premium+" / month";
+}
+
+}
+
+</script>
+  <!-- ABOUT -->
 <section class="about" id="about">
 
 <h1>Why Choose Me?</h1>
