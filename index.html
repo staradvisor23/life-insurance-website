@@ -163,17 +163,28 @@ let name=document.getElementById("name").value;
 let mobile=document.getElementById("mobile").value;
 let email=document.getElementById("email").value;
 let plan=document.getElementById("plan").value;
+let message=document.getElementById("message").value;
 
-if(name=="" || mobile==""){
 
-alert("Please fill all required details.");
+fetch("https://script.google.com/macros/s/AKfycbzY7xf4JElbInPl8k2IvHfkLq-xLeAlAEx1yuVin30dP1V9BvO40W-Ftdya8joz9o3c/exec",{
 
-}
-else{
+method:"POST",
 
-alert("Thank you "+name+"! We will contact you soon.");
+body:JSON.stringify({
 
-}
+name:name,
+mobile:mobile,
+email:email,
+plan:plan,
+message:message
+
+})
+
+})
+
+.then(res=>alert("Thank you "+name+"! Details submitted successfully."))
+
+.catch(err=>alert("Error submitting form"));
 
 }
 
