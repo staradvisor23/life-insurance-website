@@ -157,6 +157,25 @@ else{
 }
 
 }
+function submitForm(){
+
+let name=document.getElementById("name").value;
+let mobile=document.getElementById("mobile").value;
+let email=document.getElementById("email").value;
+let plan=document.getElementById("plan").value;
+
+if(name=="" || mobile==""){
+
+alert("Please fill all required details.");
+
+}
+else{
+
+alert("Thank you "+name+"! We will contact you soon.");
+
+}
+
+}
 
 </script>
   <!-- ABOUT -->
@@ -205,6 +224,26 @@ else{
 <h1>Contact Me</h1>
 
 <p>📞 9260127111</p>
+<div class="contact-form">
+
+    <input type="text" placeholder="Your Name" id="name">
+
+    <input type="tel" placeholder="Mobile Number" id="mobile">
+
+    <input type="email" placeholder="Email Address" id="email">
+
+    <select id="plan">
+        <option>Select Insurance Plan</option>
+        <option>Life Insurance</option>
+        <option>Health Insurance</option>
+        <option>Retirement Plan</option>
+    </select>
+
+    <textarea id="message" placeholder="Your Message"></textarea>
+
+    <button onclick="submitForm()">Submit</button>
+
+</div>
 
 <a href="https://wa.me/919260127111" class="whatsapp">
 <i class="fab fa-whatsapp"></i>
