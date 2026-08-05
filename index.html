@@ -167,6 +167,7 @@ let message=document.getElementById("message").value;
 
 fetch("https://script.google.com/macros/s/AKfycbxK2YrVe7RBEmzUNBHpV9Wz4Pmnd8BGuyBFDGe4Bfm9jX57a5GaOQHjMjaDp8qKvmav/exec", {
     method: "POST",
+     mode: "no-cors", 
     headers: {
         "Content-Type": "application/json"
     },
