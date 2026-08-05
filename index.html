@@ -168,19 +168,25 @@ let message=document.getElementById("message").value;
 
 fetch("https://script.google.com/macros/s/AKfycbzY7xf4JElbInPl8k2IvHfkLq-xLeAlAEx1yuVin30dP1V9BvO40W-Ftdya8joz9o3c/exec",{
 
-method:"POST",
-
-body:JSON.stringify({
-
-name:name,
-mobile:mobile,
-email:email,
-plan:plan,
-message:message
-
+fetch("YOUR_WEB_APP_URL", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        name,
+        mobile,
+        email,
+        plan,
+        message
+    })
 })
-
+.then(res => res.text())
+.then(data => {
+    alert("Submitted Successfully");
+    console.log(data);
 })
+.catch(err => console.error(err));
 
 .then(res=>alert("Thank you "+name+"! Details submitted successfully."))
 
