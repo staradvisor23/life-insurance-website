@@ -130,6 +130,7 @@
 <!-- JavaScript -->
 <script>
 
+// PREMIUM CALCULATOR
 function calculatePremium(){
 
 let age = document.getElementById("age").value;
@@ -157,7 +158,9 @@ else{
 }
 
 }
-<script>
+
+
+// FORM SUBMIT
 function submitForm(){
 
 let name=document.getElementById("name").value;
@@ -166,7 +169,6 @@ let email=document.getElementById("email").value;
 let plan=document.getElementById("plan").value;
 let message=document.getElementById("message").value;
 
-// Validation
 if(name=="" || mobile==""){
   alert("Please fill required fields");
   return;
@@ -185,21 +187,22 @@ fetch("https://script.google.com/macros/s/AKfycbyKg2SY14RLGIHIrArZ1WA0K3Jqauc11U
     message: message
   })
 })
-.then(response => response.json())
+.then(res => res.text())
 .then(data => {
   alert("Form submitted successfully ✅");
 
-  // Clear form
   document.getElementById("name").value="";
   document.getElementById("mobile").value="";
   document.getElementById("email").value="";
   document.getElementById("plan").value="";
   document.getElementById("message").value="";
 })
-.catch(error => {
+.catch(err => {
   alert("Error submitting form ❌");
 });
+
 }
+
 </script>
 
   <!-- ABOUT -->
