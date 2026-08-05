@@ -166,28 +166,25 @@ let plan=document.getElementById("plan").value;
 let message=document.getElementById("message").value;
 
 fetch("https://script.google.com/macros/s/AKfycbyCNmblV8OLNDpnhjHnGAakreNoolFqFWk8thJQweiW1zdtt88RhM1z86T4X05tkic/exec", {
-    method: "POST",
-     mode: "no-cors", 
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        name: name,
-        mobile: mobile,
-        email: email,
-        plan: plan,
-        message: message
-    })
+   method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    name: name,
+    mobile: mobile,
+    email: email,
+    plan: plan,
+    message: message
+  })
 })
-.then(res => res.text())
+.then(res => res.json())
 .then(data => {
-    alert("Submitted Successfully");
+  alert("Form submitted successfully");
 })
 .catch(err => {
-    alert("Error submitting form");
-    console.error(err);
+  alert("Error submitting form");
 });
-
 }
 
 </script>
