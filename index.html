@@ -177,9 +177,6 @@ if(name=="" || mobile==""){
 fetch("https://script.google.com/macros/s/AKfycbyKg2SY14RLGIHIrArZ1WA0K3Jqauc11UmnJuxq3wxjX4SvPe05-k5IrTM5NOg2Hntn/exec", {
   method: "POST",
      mode: "no-cors",
-  headers: {
-    "Content-Type": "application/json"
-  },
   body: JSON.stringify({
     name: name,
     mobile: mobile,
