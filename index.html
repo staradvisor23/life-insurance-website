@@ -176,7 +176,7 @@ if(name=="" || mobile==""){
 
 fetch("https://script.google.com/macros/s/AKfycbyKg2SY14RLGIHIrArZ1WA0K3Jqauc11UmnJuxq3wxjX4SvPe05-k5IrTM5NOg2Hntn/exec", {
   method: "POST",
-     mode: "no-cors",
+  mode: "no-cors",
   body: JSON.stringify({
     name: name,
     mobile: mobile,
@@ -185,8 +185,7 @@ fetch("https://script.google.com/macros/s/AKfycbyKg2SY14RLGIHIrArZ1WA0K3Jqauc11U
     message: message
   })
 })
-.then(res => res.text())
-.then(data => {
+.then(() => {   // 🔥 response handle करू नको
   alert("Form submitted successfully ✅");
 
   document.getElementById("name").value="";
@@ -195,10 +194,9 @@ fetch("https://script.google.com/macros/s/AKfycbyKg2SY14RLGIHIrArZ1WA0K3Jqauc11U
   document.getElementById("plan").value="";
   document.getElementById("message").value="";
 })
-.catch(err => {
+.catch(() => {
   alert("Error submitting form ❌");
 });
-
 }
 
 </script>
